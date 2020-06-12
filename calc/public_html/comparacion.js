@@ -5,7 +5,7 @@
  */
 function uno(){
     var un=document.getElementById("resultado").value;
-    if(un=="0"){
+    if(un==="0"){
         document.getElementById("resultado").value="1";
     }else {
         var u="1";
