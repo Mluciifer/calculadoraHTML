@@ -13,3 +13,13 @@ function uno(){
         document.getElementById("resultado").value=rsu;
     }
 }
+function dos(){
+    var ds=document.getElementById("resultado").value;
+    if(ds=="0"){
+        document.getElementById("resultado").value="2";
+    }else {
+        var d="2";
+        var rds=ds.concat(d);
+        document.getElementById("resultado").value=rds;
+    }
+}
