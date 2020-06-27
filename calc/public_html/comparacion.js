@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-//funciones que validan al añadir el valor de cada boton  BOTONES > 
+//funciones que validan al añadir el valor de cada boton  BOTONES !!> 
 function uno(){
     var un=document.getElementById("resultado").value;
     if(un==="0"){
