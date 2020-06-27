@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//funciones que validan al añadir el valor de cada boton 
+//funciones que validan al añadir el valor de cada boton  BOTONES> 
 function uno(){
     var un=document.getElementById("resultado").value;
     if(un==="0"){
@@ -23,4 +23,14 @@ function dos(){
         var rds=ds.concat(d);
         document.getElementById("resultado").value=rds;
     }
+    function dos(){
+    var ds=document.getElementById("resultado").value;
+    if(ds=="0"){
+        document.getElementById("resultado").value="2";
+    }else {
+        var d="2";
+        var rds=ds.concat(d);
+        document.getElementById("resultado").value=rds;
+    }
+}
 }
