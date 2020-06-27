@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//añadiendo pruebas
 function uno(){
     var un=document.getElementById("resultado").value;
     if(un=="0"){
