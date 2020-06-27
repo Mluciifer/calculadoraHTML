@@ -11,12 +11,16 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <p id="demo"></p>
+        
         <input type="text" id="resultado" value="0">
+        <input type="hidden" id="memoria">
         <input type="button" value="1" onclick="uno()">
-        <input type="button" value="2">
-        <input type="button" value="+">
-        <input type="button" value="=">
+        <input type="button" value="2" onclick="dos()">
+        <input type="button" value="+" onclick="operaciones('sumar')">
+        <input type="button" value="=" onclick="operaciones('igual')">
         
         <script src="comparacion.js"></script>
+        <script src="operaciones.js"></script>
     </body>
 </html>
