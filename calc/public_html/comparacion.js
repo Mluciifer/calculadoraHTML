@@ -7,7 +7,7 @@
 
 
 //funciones que validan al añadir el valor de cada boton  BOTONES !!> 
->>>>>>> master
+//>>>>>>> master
 function uno(){
     var un=document.getElementById("resultado").value;
     if(un==="0"){
