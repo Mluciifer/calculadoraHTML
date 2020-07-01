@@ -80,7 +80,7 @@ function siete(){
 function ocho(){
     var oc=document.getElementById("resultado").value;
     if(oc=="0"){
-        document.getElementById("resultado").value="0";
+        document.getElementById("resultado").value="8";
     }else{
         var oh="8";
         var rso=oc.concat(oh);
