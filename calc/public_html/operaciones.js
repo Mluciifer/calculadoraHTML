@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//calculos a realizar00000>
+//calculos a realizar>
 function operaciones(op){
     var ops={suma:function(n1,n2){return (parseInt(n1)+parseInt(n2));},
         restar:function(n1,n2){return (parseInt(n1)-parseInt(n2))},

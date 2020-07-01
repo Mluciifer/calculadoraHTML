@@ -9,29 +9,48 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="diseño.css">
     </head>
     <body>
-        <p id="demo"></p>
         
-        <input type="text" id="resultado" value="0">
-        <input type="hidden" id="memoria">
-        <input type="button" value="1" onclick="uno()">
-        <input type="button" value="2" onclick="dos()">
-        <input type="button" value="3" onclick="tres()">
-        <input type="button" value ="4" onclick="cuatro()">
-        <input type="button" value="5" onclick="cinco()">
-        <input type="button" value ="6" onclick="seis()">
-        <input type="button" value="7" onclick="siete()">
-        <input type="button" value="8" onclick="ocho()">
-        <input type="button" value="9" onclick="nueve()">
-        <input type="button" value="0" onclick="cero()">
+
+        <table>
+    <tr>
+        <th> <input type="text" id="resultado" value="0"></th>
         
-        <input type="button" value="+" onclick="operaciones('sumar')">
-        <input type="button" value="-" onclick="operaciones('restar')">
-        <input type="button" value="X" onclick="operaciones('multiplicar')">
-        <input type="button" value="/" onclick="operaciones('dividir')">
-        <input type="button" value="=" onclick="operaciones('igual')">
+        </tr>
+                  <input type="hidden" id="memoria">
+
+        <tr>
+        <td><input type="button" value="1" onclick="uno()" id="btn"></td> 
+        <td><input type="button" value="2" onclick="dos()" id="btn"></td>
+        <td><input type="button" value="3" onclick="tres()"id="btn"></td>
+        </tr>
+        <tr>
+        <td><input type="button" value ="4" onclick="cuatro()" id="btn"></td>
+        <td><input type="button" value="5" onclick="cinco()"id="btn"></td>
+        <td><input type="button" value ="6" onclick="seis()"id="btn"></td>
+        </tr>
+        <tr>
+        <td><input type="button" value="7" onclick="siete()" id="btn"></td>
+        <td><input type="button" value="8" onclick="ocho()" id="btn"></td>
+        <td><input type="button" value="9" onclick="nueve()" id="btn"></td>
+        <tr>
+        </tr>
+        <tr>
+        <td><input type="button" value="0" onclick="cero()"id="btn"></td>
+        </tr>
+       
+        <tr>
+            <td><input type="button" value="+" onclick="operaciones('sumar')"></td>
+        <td><input type="button" value="-" onclick="operaciones('restar')"></td>
+        <td><input type="button" value="X" onclick="operaciones('multiplicar')"></td>
+        <td><input type="button" value="/" onclick="operaciones('dividir')"></td>
+        <td><input type="button" value="=" onclick="operaciones('igual')"></td>
+        </tr>
         
+         </table>
+     
         <script src="comparacion.js"></script>
         <script src="operaciones.js"></script>
     </body>
