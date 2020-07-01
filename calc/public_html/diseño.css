@@ -11,15 +11,20 @@ and open the template in the editor.
 
 /*diseño visual*/
 
-table,th,td:hover{
-    
+table,th,td{
+    border :1px solid ; 
     
 }
 td{
-    border-color: red;
+    border: 1px solid blue;
     display: inline;
+    height: 60%;
     
 }
+#for {
+    background-color: red;
+}
+
 #btn:hover{
    background-color:blue;
 }
