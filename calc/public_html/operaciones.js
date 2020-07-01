@@ -34,6 +34,9 @@ function operaciones(op){
             document.getElementById("resultado").value=dv + "/";
             document.getElementById("memoria").value="divi";
             break;
+        case "borrar":
+            var br=document.getElementById("resultado"); br.value=br.value.substring(0,br.value.length -1);
+           break;
         case "igual":
            operaciones=document.getElementById("resultado").value;
            var mem=document.getElementById("memoria").value;
