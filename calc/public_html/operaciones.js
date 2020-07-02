@@ -46,23 +46,51 @@ function operaciones(op){
                    var ope= operaciones.split("+");
                     var so=ops.suma(ope[0],ope[1]);
                     document.getElementById("resultado").value=so;
+                    var rts=document.getElementById("resultado").value
+                    if(rts==="NaN"){
+                        document.getElementById("resultado").value="0";
+                        document.getElementById("memoria").value=" ";
+                    }
                     break;
                 case "resta":
                     var rs= operaciones.split("-");
                     var rt= ops.restar(rs[0],rs[1]);
                     document.getElementById("resultado").value=rt;
+                    var rt2=document.getElementById("resultado").value;
+                    if(rt2==="NaN"){
+                        document.getElementById("resultado").value="0";
+                        document.getElementById("memoria").value=" ";
+                    }
                     break;
                 case "multipliq":
                     var mlt=operaciones.split("x");
                     var mt=ops.multiplicacion(mlt[0],mlt[1]);
                     document.getElementById("resultado").value=mt;
+                    var mt2= document.getElementById("resultado").value;
+                    if(mt2==="NaN"){
+                        document.getElementById("resultado").value="0";
+                        document.getElementById("memoria").value=" ";
+                    }
                     break;
                 case "divi":
                     var di=operaciones.split("/");
                     var rdv=ops.dividir(di[0],di[1]);
                     document.getElementById("resultado").value=rdv;
+                    var rdvs=document.getElementById("resultado").value;
+                    if(rdvs==="NaN"){
+                        document.getElementById("resultado").value="0";
+                        document.getElementById("memoria").value=" ";
+                    }
                     break;
+                default:
+                    var k=document.getElementById("memoria").value;
+                    
             }
             break;
+        default:
+            var g=document.getElementById("resultado").value;
+           
+   }        if(g==="NaN"){
+            document.getElementById("resultado").value="0";
    }
 }
