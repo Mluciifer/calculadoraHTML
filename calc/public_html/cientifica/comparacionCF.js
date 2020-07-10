@@ -107,5 +107,16 @@ function cero(){
     }
     
 }
-
+function sen(){
+    var se=document.getElementById("resultado").value;
+    if(se==="0"){
+     document.getElementById("resultado").value="seno";
+     document.getElementById("resultado").style.color="blue";
+    }else{
+        var sn="seno";
+        var rss=se.concat(sn);
+        document.getElementById("resultado").value=rss;
+        document.getElementById("resultado").style.color="red";
+    }
+}
 

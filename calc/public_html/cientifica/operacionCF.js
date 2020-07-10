@@ -6,10 +6,11 @@
 
 //calculos a realizar>
 function operaciones(op){
-    var ops={suma:function(n1,n2){return (parseInt(n1)+parseInt(n2));},
-        restar:function(n1,n2){return (parseInt(n1)-parseInt(n2));},
-        multiplicacion:function(n1,n2){return (parseInt(n1)*parseInt(n2));},
-                dividir:function(n1,n2){return (parseInt(n1)/parseInt(n2));}
+    var ops={suma:function(n1,n2){return (parseFloat(n1)+parseFloat(n2));},
+        restar:function(n1,n2){return (parseFloat(n1)-parseFloat(n2));},
+        multiplicacion:function(n1,n2){return (parseFloat(n1)*parseFloat(n2));},
+                dividir:function(n1,n2){return (parseFloat(n1)/parseFloat(n2));},
+                seno:function(n1){return(Math.sin(parseFloat(n1)*Math.PI/180));}
     };
     
     var operaciones;
@@ -35,9 +36,28 @@ function operaciones(op){
             document.getElementById("resultado").value=dv + "/";
             document.getElementById("memoria").value="divi";
             break;
+           
+        case "seno":
+           
+            var sn=document.getElementById("resultado").value;
+            if(sn==="0"){
+            document.getElementById("resultado").value=sn+"seno";
+            document.getElementById("memoria").value="sin";
+            document.getElementById("resultado").style.color="blue";
+        }else{
+            var se="seno";
+            var rss=sn.concat(se);
+            document.getElementById("resultado").value=rss;
+            document.getElementById("resultado").style.color="red";}
+            
+           
+            break;
+//boton backsapce para borrar caracteres 
         case "borrar":
-            var br=document.getElementById("resultado"); br.value=br.value.substring(0,br.value.length -1);
+            var br=document.getElementById("resultado"); 
+            br.value=br.value.substring(0,br.value.length -1);
            break;
+           
         case "igual":
            operaciones=document.getElementById("resultado").value;
            var mem=document.getElementById("memoria").value;
@@ -83,6 +103,22 @@ function operaciones(op){
                         document.getElementById("memoria").value=" ";
                     }
                     break;
+                case "sin":
+                    
+                    var si=operaciones.split("seno");
+                    var rsn0 = ops.seno(si[0]);
+                    var rsn = ops.seno(si[1]);
+                    
+                    document.getElementById("resultado").value=rsn||rsn0;
+                   
+                    var rsnd=document.getElementById("resultado").value;
+                    if(rsnd==="NaN"){
+                        document.getElementById("resultado").value="0";
+                        document.getElementById("memoria").value=" ";
+                    }
+                   
+                    break;
+                    
                 default:
                     var k=document.getElementById("memoria").value;
                     

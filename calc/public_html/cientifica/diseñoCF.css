@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : Luciifer
 */
 table{
-      width: 25%;
+      width: 50%;
       height: 200px;
       
 }
@@ -32,7 +32,7 @@ td{
     height: 50px;
 }
 #btn{
-    width: 23.5%;
+    width: 12%;
     height: 40px;
 }
 #btn:hover{
