@@ -11,7 +11,9 @@ function operaciones(op){
         multiplicacion:function(n1,n2){return (parseFloat(n1)*parseFloat(n2));},
                 dividir:function(n1,n2){return (parseFloat(n1)/parseFloat(n2));},
                 seno:function(n1){return(Math.sin(parseFloat(n1)*Math.PI/180));},
-                coseno:function(n1){return(Math.cos(parseFloat(n1)*Math.PI/180));}
+                coseno:function(n1){return(Math.cos(parseFloat(n1)*Math.PI/180));},
+                tangente:function(n1){return(Math.tan(parseFloat(n1)*Math.PI/180));},
+                cuadrado:function(n1,n2){return(Math.pow(parseFloat(n1),parseFloat(n2)));}
     };
     
     var operaciones;
@@ -60,9 +62,35 @@ function operaciones(op){
             var ce="coseno";
             var rcs=cs.concat(ce);
             document.getElementById("resultado").value=rcs;
-            document.getElementById("resultado").style.color="yellow";}
+            document.getElementById("resultado").style.color="yellow";
+        }
             break;
-//boton backsapce para borrar caracteres 
+        case "tangente":
+            var tn=document.getElementById("resultado").value;
+            if(tn==="0"){
+                document.getElementById("resultado").value=tn + "tangente";
+                document.getElementById("memoria").value="tang";
+                document.getElementById("resultado").style.color="red";
+            }else {
+                var tg="tangente";
+                var rts=tn.concat(tg);
+                document.getElementById("resultado").value=rts;
+                document.getElementById("memoria").style.color="green";
+            }
+            break;
+        case "cuadrado":
+                var cd=document.getElementById("resultado").value;
+                if(cd==="0"){
+                    document.getElementById("resultado").value=cd + "^";
+                    document.getElementById("memoria").value="cuadr";
+                }else{
+                    var cu="^";
+                    var rcu=cd.concat(cu);
+                    document.getElementById("resultado").value=rcu;
+                    document.getElementById("memoria").value="cuadr"
+                }
+                break;
+//boton abacksapce para borrar caracteres 
         case "borrar":
             var br=document.getElementById("resultado"); 
             br.value=br.value.substring(0,br.value.length -1);
@@ -132,6 +160,28 @@ function operaciones(op){
                     document.getElementById("resultado").value=rcn||rcn0;
                     var rc=document.getElementById("resultado").value;
                     if (rc==="NaN"){
+                        document.getElementById("resultado").value="0";
+                        document.getElementById("memoria").value=" ";
+                    }
+                    break;
+                case "tang":
+                    var t= operaciones.split("tangente");
+                    var tgn0=ops.tangente(t[0]);
+                    var tgn=ops.tangente(t[1]);
+                    document.getElementById("resultado").value=tgn||tgn0;
+                    var tt=document.getElementById("resultado").value;
+                    if (tt==="NaN"){
+                        document.getElementById("resultado").value="0";
+                        document.getElementById("memoria").value=" ";
+                    }
+                    break;
+                case "cuadr":
+                    var c=operaciones.split("^");
+                    var cp=ops.cuadrado(c[0],c[1]);
+                   // var cps=ops.cuadrado(c[1],c[0]);
+                    document.getElementById("resultado").value=cp;
+                    var ct=document.getElementById("resultado").value;
+                    if(ct==="0"){
                         document.getElementById("resultado").value="0";
                         document.getElementById("memoria").value=" ";
                     }

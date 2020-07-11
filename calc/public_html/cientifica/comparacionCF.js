@@ -96,7 +96,7 @@ function nueve(){
 }
 function cero(){
     var ce=document.getElementById("resultado").value;
-    if(ce=="0"){
+    if(ce==="0"){
         var re="0";
         var rsre=ce.concat(re);
         document.getElementById("resultado").value=rsre;
@@ -107,5 +107,15 @@ function cero(){
     }
     
 }
-
+function pnt(){
+    var p=document.getElementById("resultado").value;
+    if(p==="0"){
+        var pt=".";
+        var ptr=p.concat(pt);
+        document.getElementById("resultado").value=ptr;
+    }else
+       var pt=".";
+        var ptr=p.concat(pt);
+        document.getElementById("resultado").value=ptr;
+}
 
