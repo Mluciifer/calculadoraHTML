@@ -10,7 +10,8 @@ function operaciones(op){
         restar:function(n1,n2){return (parseFloat(n1)-parseFloat(n2));},
         multiplicacion:function(n1,n2){return (parseFloat(n1)*parseFloat(n2));},
                 dividir:function(n1,n2){return (parseFloat(n1)/parseFloat(n2));},
-                seno:function(n1){return(Math.sin(parseFloat(n1)*Math.PI/180));}
+                seno:function(n1){return(Math.sin(parseFloat(n1)*Math.PI/180));},
+                coseno:function(n1){return(Math.cos(parseFloat(n1)*Math.PI/180));}
     };
     
     var operaciones;
@@ -36,9 +37,7 @@ function operaciones(op){
             document.getElementById("resultado").value=dv + "/";
             document.getElementById("memoria").value="divi";
             break;
-           
         case "seno":
-           
             var sn=document.getElementById("resultado").value;
             if(sn==="0"){
             document.getElementById("resultado").value=sn+"seno";
@@ -48,9 +47,20 @@ function operaciones(op){
             var se="seno";
             var rss=sn.concat(se);
             document.getElementById("resultado").value=rss;
+            document.getElementById("memoria").value="sin";
             document.getElementById("resultado").style.color="red";}
-            
-           
+            break;
+        case "coseno":
+        var cs=document.getElementById("resultado").value;
+        if(cs==="0"){
+            document.getElementById("resultado").value=cs+"coseno";
+            document.getElementById("memoria").value="cos";
+            document.getElementById("resultado").style.color="green" ;
+        }else{
+            var ce="coseno";
+            var rcs=cs.concat(ce);
+            document.getElementById("resultado").value=rcs;
+            document.getElementById("resultado").style.color="yellow";}
             break;
 //boton backsapce para borrar caracteres 
         case "borrar":
@@ -108,17 +118,24 @@ function operaciones(op){
                     var si=operaciones.split("seno");
                     var rsn0 = ops.seno(si[0]);
                     var rsn = ops.seno(si[1]);
-                    
                     document.getElementById("resultado").value=rsn||rsn0;
-                   
                     var rsnd=document.getElementById("resultado").value;
                     if(rsnd==="NaN"){
                         document.getElementById("resultado").value="0";
                         document.getElementById("memoria").value=" ";
                     }
-                   
+                   break;
+                case "cos":
+                    var cn=operaciones.split("coseno");
+                    var rcn0= ops.coseno(cn[0]);
+                    var rcn= ops.coseno(cn[1]);
+                    document.getElementById("resultado").value=rcn||rcn0;
+                    var rc=document.getElementById("resultado").value;
+                    if (rc==="NaN"){
+                        document.getElementById("resultado").value="0";
+                        document.getElementById("memoria").value=" ";
+                    }
                     break;
-                    
                 default:
                     var k=document.getElementById("memoria").value;
                     
