@@ -35,19 +35,30 @@ td{
     width: 12%;
     height: 40px;
 }
+#btn2{
+   width: 97%;  
+}
+#btn3{
+     width: 12%;
+    height: 40px;
+}
 #btn:hover{
    background-color:red;
-}
-#btn2:hover{
-    background-color:red; 
 }
 #btn:active{
     background-color:white;
 }
+#btn2:hover{
+    background-color:red; 
+}
 #btn2:active{
     background-color: white;
 }
-#btn2{
-   width: 97%;
-   
+#btn3:hover{
+    background-color: green;
 }
+#btn3:active{
+    background-color:yellow; 
+}
+
+

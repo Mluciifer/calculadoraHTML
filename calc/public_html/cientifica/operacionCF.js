@@ -13,7 +13,19 @@ function operaciones(op){
                 seno:function(n1){return(Math.sin(parseFloat(n1)*Math.PI/180));},
                 coseno:function(n1){return(Math.cos(parseFloat(n1)*Math.PI/180));},
                 tangente:function(n1){return(Math.tan(parseFloat(n1)*Math.PI/180));},
-                cuadrado:function(n1,n2){return(Math.pow(parseFloat(n1),parseFloat(n2)));}
+                cuadrado:function(n1,n2){return(Math.pow(parseFloat(n1),parseFloat(n2)));},
+                raiz:function(n1){return (Math.sqrt(parseFloat(n1)));},
+                modulo:function(n1,n2){return(parseFloat(n1)% parseFloat(n2));},
+                factorial:function(n1){ 
+                    var to=1;
+                    for(var i=1;i<=n1;i++){
+                        to*=i;
+                        } 
+                       document.getElementById("resultado").value=to;
+                        return to;
+                    },
+                euler:function(){return (Math.E);}    
+              
     };
     
     var operaciones;
@@ -88,6 +100,56 @@ function operaciones(op){
                     var rcu=cd.concat(cu);
                     document.getElementById("resultado").value=rcu;
                     document.getElementById("memoria").value="cuadr"
+                }
+                break;
+        case "raiz":
+                var r=document.getElementById("resultado").value;
+                if(r==="0"){
+                    document.getElementById("resultado").value=r + "√";
+                    document.getElementById("memoria").value="root";
+                }else{
+                    var rz="√";
+                    var rrz=r.concat(rz);
+                    document.getElementById("resultado").value=rrz;
+                    document.getElementById("memoria").value="root";
+                }
+                break;
+        case "module":
+                var m=document.getElementById("resultado").value;
+                if(m==="0"){
+                    document.getElementById("resultado").value=m + "Mod";
+                    document.getElementById("memoria").value="modl";
+                }else{
+                    var md="Mod";
+                    var mds=m.concat(md);
+                    document.getElementById("resultado").value=mds;
+                    document.getElementById("memoria").value="modl";
+                }
+                break;
+            case "factorial":
+                var f=document.getElementById("resultado").value;
+                if(f==="0"){
+                    document.getElementById("resultado").value="0";
+                    document.getElementById("memoria").value="fact";
+                }else{
+                    document.getElementById("resultado").value=f+"!";
+                    document.getElementById("memoria").value="fact";
+                }
+               break;
+           case "euler":
+                var e=document.getElementById("resultado").value ;
+                if(e==="0"){
+                    document.getElementById("resultado").value=Math.E;
+                }else {
+                    document.getElementById("resultado").value=e + Math.E;
+                }
+                break;
+            case "pi":
+                var p=document.getElementById("resultado").value;
+                if(p==="0"){
+                    document.getElementById("resultado").value=Math.PI;
+                }else{
+                    document.getElementById("resultado").value=p + Math.PI;
                 }
                 break;
 //boton abacksapce para borrar caracteres 
@@ -181,10 +243,36 @@ function operaciones(op){
                    // var cps=ops.cuadrado(c[1],c[0]);
                     document.getElementById("resultado").value=cp;
                     var ct=document.getElementById("resultado").value;
-                    if(ct==="0"){
+                    if(ct==="NaN"){
                         document.getElementById("resultado").value="0";
                         document.getElementById("memoria").value=" ";
                     }
+                    break;
+                case "root":
+                    var r=operaciones.split("√");
+                    var rp0=ops.raiz(r[0]);
+                    var rp=ops.raiz(r[1]);
+                    document.getElementById("resultado").value=rp0||rp;
+                    var rt=document.getElementById("resultado").value;
+                    if(rt==="NaN"){
+                        document.getElementById("resultado").value="0";
+                        document.getElementById("memoria").value=" ";
+                    }
+                    break;
+                case "modl":
+                    var ml=operaciones.split("Mod");
+                    var mls0=ops.modulo(ml[0],ml[1]);
+                    document.getElementById("resultado").value=mls0;
+                    var mo=document.getElementById("resultado").value;
+                    if(mo==="NaN"){
+                        document.getElementById("resultado").value="0";
+                        document.getElementById("memoria").value=" ";
+                    }
+                    break;
+                case "fact":
+                    var fc=operaciones.split("!");
+                    var fc0=ops.factorial(fc[0]);
+                    document.getElementById("resultado").value=fc0;
                     break;
                 default:
                     var k=document.getElementById("memoria").value;
