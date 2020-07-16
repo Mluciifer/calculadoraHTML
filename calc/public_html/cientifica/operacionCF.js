@@ -152,6 +152,22 @@ function operaciones(op){
                     document.getElementById("resultado").value=p + Math.PI;
                 }
                 break;
+            case "mm":
+                var mm=document.getElementById("resultado").value;
+                if(mm==="0"){
+                    document.getElementById("resultado").value="0";
+                }else{
+                   var h= document.getElementById("resultado").value;
+                   var me=document.getElementById("memoria").value=h;
+                   var k= Math.sign(h);
+                   if(k=== -1){
+                      var i=parseFloat(me)*-1;
+                       document.getElementById("resultado").value= i;
+                   }else{
+                       document.getElementById("resultado").value="-"+h;
+                   }
+                }
+            break;
 //boton abacksapce para borrar caracteres 
         case "borrar":
             var br=document.getElementById("resultado"); 
