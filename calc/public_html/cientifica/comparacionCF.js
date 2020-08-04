@@ -1,121 +1,116 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-//funciones que validan al añadir el valor de cada boton  BOTONES !!> 
+//funciones que validan al añadir el valor de cada boton  
 function uno(){
-    var un=document.getElementById("resultado").value;
-    if(un==="0"){
+    var $_un=document.getElementById("resultado").value;
+    if($_un==="0"){
         document.getElementById("resultado").value="1";
     }else {
-        var u="1";
-        var rsu=un.concat(u);
-        document.getElementById("resultado").value=rsu;
+        var $_u="1";
+        var $_rsu=$_un.concat($_u);
+        document.getElementById("resultado").value=$_rsu;
     }
 }
 function dos(){
-    var ds=document.getElementById("resultado").value;
-    if(ds=="0"){
+    var $_ds=document.getElementById("resultado").value;
+    if($_ds==="0"){
         document.getElementById("resultado").value="2";
     }else {
-        var d="2";
-        var rds=ds.concat(d);
-        document.getElementById("resultado").value=rds;
+        var $_d="2";
+        var $_rds=$_ds.concat($_d);
+        document.getElementById("resultado").value=$_rds;
     }
 }
 function tres(){
-    var ts=document.getElementById("resultado").value;
-    if(ts=="0"){
+    var $_ts=document.getElementById("resultado").value;
+    if($_ts==="0"){
         document.getElementById("resultado").value="3";
     }else {
-        var t="3";
-        var rds=ts.concat(t);
-        document.getElementById("resultado").value=rds;
+        var $_t="3";
+        var $_rds=$_ts.concat($_t);
+        document.getElementById("resultado").value=$_rds;
     }
 }
 function cuatro(){
-    var cs=document.getElementById("resultado").value;
-    if (cs=="0"){
+    var $_cs=document.getElementById("resultado").value;
+    if ($_cs==="0"){
         document.getElementById("resultado").value="4";
     }else {
-        var c="4";
-        var rsc= cs.concat(c);
-        document.getElementById("resultado").value=rsc;
+        var $_c="4";
+        var $_rsc= $_cs.concat($_c);
+        document.getElementById("resultado").value=$_rsc;
     }
 }
 function  cinco(){
-    var ci=document.getElementById("resultado").value;
-    if (ci=="0"){
+    var $_ci=document.getElementById("resultado").value;
+    if ($_ci==="0"){
         document.getElementById("resultado").value="5";
-    }else {var cc="5";
-    var rscc= ci.concat(cc);
-    document.getElementById("resultado").value=rscc;
+    }else {var $_cc="5";
+    var $_rscc= $_ci.concat($_cc);
+    document.getElementById("resultado").value=$_rscc;
 }
 }
 function seis(){
-    var se=document.getElementById("resultado").value;
-    if(se=="0"){
+    var $_se=document.getElementById("resultado").value;
+    if($_se==="0"){
         document.getElementById("resultado").value="6";
     }else {
-        var sei ="6";
-        var rse=se.concat(sei);
-        document.getElementById("resultado").value=rse;
+        var $_sei ="6";
+        var $_rse=$_se.concat($_sei);
+        document.getElementById("resultado").value=$_rse;
     }
 }
 function siete(){
-    var st=document.getElementById("resultado").value;
-    if(st=="0"){
+    var $_st=document.getElementById("resultado").value;
+    if($_st==="0"){
         document.getElementById("resultado").value="7";
     }else{
-        var s="7";
-        var rst=st.concat(s);
-        document.getElementById("resultado").value=rst;
+        var $_s="7";
+        var $_rst=$_st.concat($_s);
+        document.getElementById("resultado").value=$_rst;
         
     }
 }
 function ocho(){
-    var oc=document.getElementById("resultado").value;
-    if(oc=="0"){
+    var $_oc=document.getElementById("resultado").value;
+    if($_oc==="0"){
         document.getElementById("resultado").value="8";
     }else{
-        var oh="8";
-        var rso=oc.concat(oh);
-        document.getElementById("resultado").value=rso;
+        var $_oh="8";
+        var $_rso=$_oc.concat($_oh);
+        document.getElementById("resultado").value=$_rso;
     }
 }
 function nueve(){
-    var nu=document.getElementById("resultado").value;
-    if(nu=="0"){
+    var $_nu=document.getElementById("resultado").value;
+    if($_nu==="0"){
         document.getElementById("resultado").value="9";
     }else {
-    var nv ="9";
-    var rsn=nu.concat(nv);
-    document.getElementById("resultado").value=rsn;
+    var $_nv ="9";
+    var $_rsn=$_nu.concat($_nv);
+    document.getElementById("resultado").value=$_rsn;
     }
 }
 function cero(){
-    var ce=document.getElementById("resultado").value;
-    if(ce==="0"){
-        var re="0";
-        var rsre=ce.concat(re);
-        document.getElementById("resultado").value=rsre;
+    var $_ce=document.getElementById("resultado").value;
+    if($_ce==="0"){
+        var $_re="0";
+        var $_rsre=$_ce.concat($_re);
+        document.getElementById("resultado").value=$_rsre;
     }else{
-        var cr="0";
-        var rsce=ce.concat(cr);
-        document.getElementById("resultado").value=rsce;
+        var $_cr="0";
+        var $_rsce=$_ce.concat($_cr);
+        document.getElementById("resultado").value=$_rsce;
     }
     
 }
 function pnt(){
-    var p=document.getElementById("resultado").value;
-    if(p==="0"){
-        var pt=".";
-        var ptr=p.concat(pt);
-        document.getElementById("resultado").value=ptr;
-    }else
-       var pt=".";
-        var ptr=p.concat(pt);
-        document.getElementById("resultado").value=ptr;
+    var $_p=document.getElementById("resultado").value;
+    if($_p==="0"){
+        var $_pt=".";
+        var $_ptr=$_p.concat($_pt);
+        document.getElementById("resultado").value=$_ptr;
+    }else{
+       var $_pt=".";
+        var $_ptr=$_p.concat($_pt);
+        document.getElementById("resultado").value=$_ptr;
+    }
 }
-
