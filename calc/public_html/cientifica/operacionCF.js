@@ -304,7 +304,7 @@ function operaciones($_op){
                     }
                     break;
                 case "root":
-                    var $_r=operaciones.split("√");
+                    var $_r=$_operaciones.split("√");
                     var $_rp0=$_ops.raiz($_r[0]);
                     var $_rp=$_ops.raiz($_r[1]);
                     document.getElementById("resultado").value=$_rp0||$_rp;
@@ -315,7 +315,7 @@ function operaciones($_op){
                     }
                     break;
                 case "modl":
-                    var $_ml=operaciones.split("Mod");
+                    var $_ml=$_operaciones.split("Mod");
                     var $_mls0=$_ops.modulo($_ml[0],$_ml[1]);
                     document.getElementById("resultado").value=$_mls0;
                     var $_mo=document.getElementById("resultado").value;
@@ -325,7 +325,7 @@ function operaciones($_op){
                     }
                     break;
                 case "fact":
-                    var $_fc=operaciones.split("!");
+                    var $_fc=$_operaciones.split("!");
                     var $_fc0=$_ops.factorial($_fc[0]);
                     document.getElementById("resultado").value=$_fc0;
                     break;

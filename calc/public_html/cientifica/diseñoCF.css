@@ -8,19 +8,22 @@ and open the template in the editor.
     Author     : Luciifer
 */
 table{
-      width: 70%;
+      width: 40%;
       height: 200px;
+      
       
 }
 table,th,td{
     border :1px solid ; 
     background-color: blue;
     height: 100px;
-  
+    
+    
     
 }
 th{
     background-color: blue;
+    
 }
 td{
     border: 1px solid white;
@@ -30,20 +33,42 @@ td{
 #resultado{
     width: 85%;
     height: 50px;
+    font-size: 30px;
 }
 #btn{
-    width: 12%;
+    width: 9%;
     height: 40px;
+    font-size: 35px;
 }
 #btn2{
-   width: 97%;  
+   width: 97%; 
+  
 }
 #btn3{
      width: 12%;
     height: 40px;
+   font-size: 20px;
+}
+#bck{
+    width: 12%;
+    height: 40px;
+    font-size: 11px;
+}
+
+#bck:hover{
+    background-color: red;
+       width: 14%;
+   font-size:14px;
+   color:white;
 }
 #btn:hover{
    background-color:red;
+   width: 14%;
+   font-size:30px;
+   color:white;
+}
+#bck:active{
+    background-color: white;
 }
 #btn:active{
     background-color:white;
