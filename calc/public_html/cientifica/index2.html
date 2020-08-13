@@ -1,30 +1,25 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="diseñoCF.css">
+        <link rel="stylesheet" media="only screen and (min-width: 330px)" href="diseñoCF.css">
     </head>
     <body>
          <div>  
-<input type="text" id="pr">
-        <table >
-             <form id="for">
+        <table>
+        <form id="for">
     <tr>
-        <th> <input type="text" id="resultado" value="0"></th>
-        
-        
-        </tr>
-                                   <input type="text" id="memoria">
-
-                  
-                 
+        <th><input type="text" id="resultado" value="0"></th>
+        <input type="hidden" id="memoria">
+        </tr>    
+               <tr>
+                    <td>
+                        <input type="radio" onclick="location='/calc/basica/index.html'" >
+                        <label for="lb" id="lb">Basica</label>
+                    </td>
+                </tr>         
         <tr>
         <td><input type="button" value="1" onclick="uno()" id="btn"></td> 
         <td><input type="button" value="2" onclick="dos()" id="btn"></td>
@@ -42,7 +37,7 @@ and open the template in the editor.
         <td><input type="button" value="-" onclick="operaciones('restar')" id="btn3"></td>
         <td><input type="button" value="/" onclick="operaciones('dividir')" id="btn3"></td>
         <td><input type="button" value="√" onclick="operaciones('raiz')" id="btn3"></td>
-        <td><input type="button" value="π" onclick="operaciones('pi')" id="btn3"></td>>
+        <td><input type="button" value="π" onclick="operaciones('pi')" id="btn3"></td>
         </tr>
         <tr>
         <td><input type="button" value="7" onclick="siete()" id="btn"></td>
@@ -57,7 +52,7 @@ and open the template in the editor.
         <td><input type="button" value="." onclick="pnt()" id="btn"></td>
         <td><input type="button" value="0" onclick="cero()" id="btn"></td>
         <td><input type="reset" value="C" id="btn3"></td>
-        <td><input type="button" value="Backspace" onclick="operaciones('borrar')" id="bck"></td>>
+        <td><input type="button" value="Backspace" onclick="operaciones('borrar')" id="bck"></td>
         <td><input type="button" value="tan" onclick="operaciones('tangente')" id="btn3"></td>
         <td><input type="button" value="n!" onclick="operaciones('factorial')" id="btn3"></td>
         <td><input type="button" value="(" onclick="operaciones('parentesis')" id="btn3"></td>

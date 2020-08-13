@@ -14,15 +14,17 @@ and open the template in the editor.
     <body>
         <div>  
 
-        <table >
+        <table>
              <form id="for">
-    <tr>
-        <th> <input type="text" id="resultado" value="0"></th>
-        
-        </tr>
                   <input type="hidden" id="memoria">
-                  
-                 
+        <tr>
+        <th> <input type="text" id="resultado" value="0"></th>
+        </tr>
+        <tr>
+        <td>
+            <input type="radio"  onclick="location='/calc/cientifica/index2.html'">
+              <label for="rd" id="rd">Cientifica</label></td>
+                 </tr>
         <tr>
         <td><input type="button" value="1" onclick="uno()" id="btn"></td> 
         <td><input type="button" value="2" onclick="dos()" id="btn"></td>
@@ -45,7 +47,7 @@ and open the template in the editor.
         <td><input type="reset" value="C" id="btn"></td>
         <td><input type="button" value="0" onclick="cero()" id="btn"></td>
         
-        <td><input type="button" value="Backspace" onclick="operaciones('borrar')" id="btn"></td>>
+        <td><input type="button" value="Backspace" onclick="operaciones('borrar')" id="btn"></td>
         <td><input type="button" value="/" onclick="operaciones('dividir')" id="btn"></td>
         </tr>
        

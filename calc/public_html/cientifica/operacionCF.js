@@ -1,5 +1,5 @@
 
-//calculos a realizar>
+//calculos a realizar
 function operaciones($_op){
     var $_ops={suma:function($_n1,$_n2){return (parseFloat($_n1)+parseFloat($_n2));},
         restar:function($_n1,$_n2){return (parseFloat($_n1)-parseFloat($_n2));},
