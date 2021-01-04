@@ -17,8 +17,8 @@ th{
     
 }
 td{
-    border: 1px solid white;
-    display: inline;
+    border: none;
+   display: inline;
     
 }
 #resultado{
@@ -30,7 +30,7 @@ td{
     width: 9%;
     height: 40px;
     font-size: 35px;
-     border-radius: 10px;
+     border-radius: 80px;
 }
 #btn2{
    width: 97%; 
@@ -40,6 +40,7 @@ td{
      width: 9%;
     height: 40px;
    font-size: 20px;
+   border-radius: 10px;
 }
 #bck{
     width: 12%;
@@ -51,14 +52,26 @@ td{
     font-weight: bold;
 }
 #bck:hover{
-    background-color: red;
+        border-color: white;
+       box-shadow: 5px 10px blue inset;
+       background-color: red;
        width: 14%;
    font-size:14px;
    color:white;
 }
 #btn:hover{
+       box-shadow:0 0 20px blue inset ;
+     border-color:white;
    background-color:red;
    width: 14%;
+   font-size:30px;
+   color:white;
+}
+#btn2:hover{
+      box-shadow: 0 0 40px blue inset;
+     border-color:white;
+   background-color:red;
+   width: 90%;
    font-size:30px;
    color:white;
 }
@@ -75,7 +88,8 @@ td{
     background-color: white;
 }
 #btn3:hover{
-    background-color: green;
+    background-color: blue;
+    color: white;
 }
 #btn3:active{
     background-color:yellow; 

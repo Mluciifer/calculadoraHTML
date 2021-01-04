@@ -25,6 +25,7 @@ td{
 #resultado{
     width: 85%;
     height: 50px;
+    font-size: 30px;
 }
 #btn{
     width: 23.5%;
@@ -39,9 +40,13 @@ td{
 
 #btn:hover{
    background-color:blue;
+   color:white;
+   font-size: 35px;
 }
 #btn2:hover{
     background-color:blue; 
+    color:white;
+    font-size: 35px;
 }
 #btn:active{
     background-color:red;
